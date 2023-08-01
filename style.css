@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+}
+.nav {
+    overflow: hidden;
+    background-color: rgba(162, 239, 239, 0.845);
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 13px 15px;
+    text-decoration: none;
+    color: rgba(14, 35, 118, 0.667);
+    margin-left: 40px;
+}
+
+.nav a:hover {
+    background: rgba(14, 35, 118, 0.667);
+    color: rgba(162, 239, 239, 0.845);
+}
+
+.main {
+    margin: 3%;
+    margin-top: 70px;
+}
