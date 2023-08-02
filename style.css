@@ -1,30 +1,103 @@
-body {
+*{
     margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
-.nav {
-    overflow: hidden;
-    background-color: rgba(162, 239, 239, 0.845);
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.50),rgba(0,0,0,0.50)),url(picture/pexels-pixabay-259620.jpg);
+    background-size: cover;
+    background-position: center;
     position: fixed;
-    top: 0;
+}
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after {
     width: 100%;
 }
 
-.nav a {
-    float: left;
-    display: block;
+.content{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
     text-align: center;
-    padding: 13px 15px;
-    text-decoration: none;
-    color: rgba(14, 35, 118, 0.667);
-    margin-left: 40px;
+    color: #fff;
 }
 
-.nav a:hover {
-    background: rgba(14, 35, 118, 0.667);
-    color: rgba(162, 239, 239, 0.845);
+.content h1{
+    font-size: 70px;
+    margin-top: 80px;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
 }
 
-.main {
-    margin: 3%;
-    margin-top: 70px;
+button{
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+span {
+    background: #fff;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+    color: #000;
 }
